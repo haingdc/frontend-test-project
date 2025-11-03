@@ -70,7 +70,8 @@ input,
 label,
 button,
 a,
-span {
+span,
+div{
     margin: 0;
     font-family: "SF Pro", "League Spartan", sans-serif;
     font-optical-sizing: auto;
@@ -160,6 +161,9 @@ input::-webkit-inner-spin-button {
 .border-secondary {
     border-color: var(--secondary);
 }
+.border-white {
+    border-color: #fff;
+}
 
 /* Border Radius */
 .radius-4 {
@@ -220,6 +224,9 @@ input::-webkit-inner-spin-button {
 .bg-white {
     background: #fff;
 }
+.bg-black-12 {
+    background: var(--black-12);
+} 
 .bg-red-0 {
     background: var(--red-0);
 }
@@ -258,6 +265,9 @@ input::-webkit-inner-spin-button {
 }
 .bg-red-12 {
     background: var(--red-12);
+}
+.bg-transparent {
+    background: transparent;
 }
 .bg-primary {
     background: var(--red-10);

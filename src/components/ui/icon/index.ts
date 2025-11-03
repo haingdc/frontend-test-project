@@ -2,16 +2,24 @@
 // Do not edit manually
 
 export { default as ArrowRight } from './ArrowRight'
+export { default as CalendarDays } from './CalendarDays'
 export { default as ChevronDown } from './ChevronDown'
+export { default as Clock3 } from './Clock3'
 export { default as Globe } from './Globe'
+export { default as LocateFixed } from './LocateFixed'
+export { default as MapPin } from './MapPin'
 export { default as Menu } from './Menu'
 export { default as User } from './User'
 export { default as X } from './X'
 
 type IconName =
   | 'ArrowRight'
+  | 'CalendarDays'
   | 'ChevronDown'
+  | 'Clock3'
   | 'Globe'
+  | 'LocateFixed'
+  | 'MapPin'
   | 'Menu'
   | 'User'
   | 'X'

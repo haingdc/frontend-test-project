@@ -1,0 +1,16 @@
+.step-item {
+  position: relative;
+  flex: 1;
+  .dot {
+    z-index: 1;
+  }
+  .root {
+    position: absolute;
+    top: 12px;
+    left: calc(-50% + 0px);
+    right: calc(50% + 0px);
+  }
+  .line {
+    border-bottom: 1px dashed #5D5D5D;
+  }
+}

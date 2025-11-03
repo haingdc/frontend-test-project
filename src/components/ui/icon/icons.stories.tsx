@@ -13,7 +13,7 @@ export default meta
 type Story = StoryObj<typeof IconGrid>
 
 // This story uses a render function to fully control how the component renders.
-export const Example: Story = {
+export const Gallery: Story = {
   render: () => (
     <div>
       <IconGrid />

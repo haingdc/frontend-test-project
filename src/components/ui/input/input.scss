@@ -1,0 +1,30 @@
+.input-field {
+    display: flex;
+    align-items: stretch;
+    background-color: var(--white-0);
+
+    border-radius: 100px;
+    height: 56px;
+    max-width: 100%;
+    padding-left: 24px;
+    padding-right: 24px;
+    .input-label {
+        display: flex;
+        align-items: center;
+        top: 16px;
+        left: 24px;
+        color: #000;
+        font-weight: 500;
+    }
+
+    input[type='text'] {
+        padding-left: 8px;
+        color: #000;
+        font-size: 16px;
+        font-weight: 400;
+        line-height: 24px;
+        letter-spacing: -2%;
+        outline-style: none;
+        font-weight: 400;
+    }
+}
