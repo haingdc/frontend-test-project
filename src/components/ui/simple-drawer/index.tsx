@@ -8,6 +8,7 @@ import './simple-drawer.scss';
 import { Button } from '../button/button';
 import { X } from '../icon';
 import IMAGES_CONSTANTS from '../../../constants/images';
+import clsx from 'clsx';
 
 // Context to share state between child components
 interface DrawerContextType {
@@ -83,7 +84,7 @@ export function DrawerTrigger({
 
     return (
         <div
-            className={className}
+            className={clsx('flex', className)}
             onClick={handleClick}
             style={{ cursor: "pointer" }}
         >

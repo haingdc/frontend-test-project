@@ -29,6 +29,7 @@ const preview: Preview = {
     viewport: {
       options: INITIAL_VIEWPORTS,
     },
+    layout: 'fullscreen',
   },
   initialGlobals: {
     // 👇 Set the initial background color

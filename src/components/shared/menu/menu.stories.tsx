@@ -56,5 +56,5 @@ export default meta;
 type Story = StoryObj<typeof meta>;
 
 export const Default: Story = {
-    render: () => <InteractiveMenu initialOpen={true} />,
+    render: () => <InteractiveMenu initialOpen={false} />,
 };
