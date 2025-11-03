@@ -1,0 +1,293 @@
+/* ============================================
+   UTILITIES SYSTEM
+   ============================================ */
+
+/* General Reset */
+*,
+::after,
+::before,
+::backdrop,
+::file-selector-button {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    border: 0 solid;
+}
+button,
+input,
+select,
+optgroup,
+textarea,
+::file-selector-button {
+    font: inherit;
+    font-feature-settings: inherit;
+    font-variation-settings: inherit;
+    letter-spacing: inherit;
+    color: inherit;
+    border-radius: 0;
+    background-color: transparent;
+    opacity: 1;
+}
+
+body {
+    background-color: var(--background);
+    color: var(--foreground);
+}
+
+body,
+figure {
+    margin: 0;
+    padding: 0;
+}
+
+li {
+    list-style-type: none;
+}
+
+ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+input,
+button:focus {
+    outline: 0;
+}
+
+/* Global Element Styles */
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+li,
+section,
+textarea,
+input,
+label,
+button,
+a,
+span {
+    margin: 0;
+    font-family: "SF Pro", "League Spartan", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: normal;
+    text-decoration: none;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    -webkit-transition: all 200ms linear;
+    -o-transition: all 200ms linear;
+    -moz-transition: all 200ms linear;
+    -ms-transition: all 200ms linear;
+    transition: all 200ms linear;
+}
+
+a,
+a:hover,
+a:visited,
+a:active {
+    text-decoration: none;
+}
+
+p {
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+img {
+    display: block;
+}
+
+li {
+    white-space: nowrap;
+}
+
+/* Input Number Styles */
+/* Chrome, Safari, Edge, Opera */
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+/* List Styles */
+.list-style {
+    list-style-type: disc;
+}
+
+.no-list-style {
+    list-style-type: none;
+}
+
+.list-style::marker {
+    font-size: 12px;
+}
+
+.style-check:before {
+    content: "✓";
+    height: 100%;
+    margin-right: 10px;
+}
+
+/* Border Utilities */
+.no-border {
+    border: 0 !important;
+}
+.border-1 {
+    border: 1px solid #000;
+}
+.border-1-light {
+    border: 1px solid #e9ecef;
+}
+.border-right {
+    border-right: 1px solid rgba(75, 85, 99, 0.5);
+}
+.border-solid {
+    border-style: solid;
+}
+.border-w-0 {
+    border-width: 0;
+}
+.border-w-1 {
+    border-width: 1px;
+}
+.border-primary {
+    border-color: var(--primary);
+}
+.border-secondary {
+    border-color: var(--secondary);
+}
+
+/* Border Radius */
+.radius-4 {
+    border-radius: 4px;
+}
+.radius-8 {
+    border-radius: 8px;
+}
+.radius-10 {
+    border-radius: 10px;
+}
+.radius-15 {
+    border-radius: 15px;
+}
+.radius-20 {
+    border-radius: 20px;
+}
+.radius-25 {
+    border-radius: 25px;
+}
+.radius-30 {
+    border-radius: 30px;
+}
+.radius-100 {
+    border-radius: 100px;
+}
+.radius-t8 {
+    border-radius: 8px 8px 0px 0px;
+}
+.radius-circle {
+    border-radius: 50%;
+}
+
+/* Box Sizing */
+.border-box {
+    box-sizing: border-box;
+}
+
+/* Cursor & Interaction */
+.cursor {
+    cursor: pointer;
+}
+.opacity-0 {
+    opacity: 0;
+    pointer-events: none;
+}
+.pointer-none {
+    pointer-events: none;
+}
+
+/* Link Styles */
+.link-decor {
+    color: #000;
+    text-decoration: underline;
+}
+
+/* Background Utilities */
+.bg-white {
+    background: #fff;
+}
+.bg-red-0 {
+    background: var(--red-0);
+}
+.bg-red-1 {
+    background: var(--red-1);
+}
+.bg-red-2 {
+    background: var(--red-2);
+}
+.bg-red-3 {
+    background: var(--red-3);
+}
+.bg-red-4 {
+    background: var(--red-4);
+}
+.bg-red-5 {
+    background: var(--red-5);
+}
+.bg-red-6 {
+    background: var(--red-6);
+}
+.bg-red-7 {
+    background: var(--red-7);
+}
+.bg-red-8 {
+    background: var(--red-8);
+}
+.bg-red-9 {
+    background: var(--red-9);
+}
+.bg-red-10 {
+    background: var(--red-10);
+}
+.bg-red-11 {
+    background: var(--red-11);
+}
+.bg-red-12 {
+    background: var(--red-12);
+}
+.bg-primary {
+    background: var(--red-10);
+}
+
+.bg-center,
+.bg-contain {
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+}
+
+.pr-dot-parallax {
+    background-repeat: no-repeat;
+    background-size: auto;
+    top: 0;
+    left: 0;
+}
+
+.bg-filter {
+    background-color: #000000;
+    opacity: 0.55;
+    transition:
+        background 0.3s,
+        border-radius 0.3s,
+        opacity 0.3s;
+    width: 100%;
+    height: 100%;
+}
+
+.outline-none {
+    outline-style: none;
+}

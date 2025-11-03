@@ -1,0 +1,176 @@
+/* SimpleDrawer CSS Styles */
+
+.drawer-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: var(--background);
+    z-index: 50;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 16px;
+    backdrop-filter: blur(2px);
+    animation: fade-in 0.2s ease-out;
+}
+
+.drawer-content {
+    border-radius: 8px;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+    max-width: 90vw;
+    max-height: 90vh;
+    width: 500px;
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+    animation: scale-in 0.2s ease-out;
+}
+
+.drawer-header {
+    padding: 24px;
+    flex-shrink: 0;
+}
+
+.drawer-title {
+    font-size: 18px;
+    font-weight: 600;
+    margin: 0 0 8px 0;
+    color: #111827;
+    line-height: 1.4;
+}
+
+.drawer-description {
+    font-size: 14px;
+    color: #6b7280;
+    margin: 0;
+    line-height: 1.5;
+}
+
+.drawer-body {
+    padding: 16px 24px;
+    overflow-y: auto;
+    flex: 1;
+    max-height: calc(90vh - 200px); /* Reserve space for header and footer */
+}
+
+.drawer-footer {
+    padding: 16px 24px 24px 24px;
+    border-top: 1px solid #e5e7eb;
+    display: flex;
+    gap: 12px;
+    justify-content: flex-end;
+    flex-shrink: 0;
+    flex-wrap: wrap;
+}
+
+/* Responsive adjustments */
+@media (max-width: 640px) {
+    .drawer-content {
+        width: 95vw;
+        max-width: 95vw;
+    }
+    
+    .drawer-header,
+    .drawer-body,
+    .drawer-footer {
+        padding-left: 16px;
+        padding-right: 16px;
+    }
+    
+    .drawer-footer {
+        flex-direction: column-reverse;
+    }
+}
+
+/* Fullscreen mobile drawer */
+@media (max-width: 768px) {
+    .drawer-overlay.main-menu-drawer {
+        padding: 0;
+    }
+    
+    .main-menu-drawer .drawer-content {
+        width: 100vw !important;
+        height: 100vh !important;
+        max-width: none !important;
+        max-height: none !important;
+        border-radius: 0 !important;
+        animation: slide-in-right 0.3s ease-out;
+    }
+}
+
+@keyframes slide-in-right {
+    from {
+        transform: translateX(100%);
+    }
+    to {
+        transform: translateX(0);
+    }
+}
+
+/* Animations */
+@keyframes fade-in {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes scale-in {
+    from {
+        opacity: 0;
+        transform: scale(0.95);
+    }
+    to {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+/* Custom scrollbar for webkit browsers */
+.drawer-body::-webkit-scrollbar {
+    width: 6px;
+}
+
+.drawer-body::-webkit-scrollbar-track {
+    background: #f1f5f9;
+    border-radius: 3px;
+}
+
+.drawer-body::-webkit-scrollbar-thumb {
+    background: #cbd5e1;
+    border-radius: 3px;
+}
+
+.drawer-body::-webkit-scrollbar-thumb:hover {
+    background: #94a3b8;
+}
+
+/* Focus styles for accessibility */
+.drawer-content:focus {
+    outline: 2px solid #3b82f6;
+    outline-offset: 2px;
+}
+
+/**
+ * Drawer for Menu.
+ */
+.drawer-overlay.drawer-overlay-menu {
+    align-items: flex-start;
+    justify-content: flex-start;
+    padding: 0;
+}
+
+.drawer-overlay.drawer-overlay-menu .drawer-content {
+    width: 100%;
+    max-width: none;
+}
+
+.drawer-header-menu {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
