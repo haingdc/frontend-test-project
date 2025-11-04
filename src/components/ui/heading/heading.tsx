@@ -1,12 +1,17 @@
-import clsx from 'clsx'
 import './heading.scss'
-export type HeadingProps = {
-    children?: React.ReactNode
-} & React.ComponentProps<"h1">
+import { headingVariants } from './variants'
+import type { VariantProps } from 'class-variance-authority'
 
-function Heading({ children, className, ...props }: HeadingProps) {
+type HeadingProps = React.ComponentProps<'h1'> &
+    VariantProps<typeof headingVariants>
+
+function Heading({ variant, children, className, ...props }: HeadingProps) {
+    // TODO: we should support other heading levels than fixed h1
     return (
-        <h1 className={clsx("heading font-gilroy bg-heading text-center", className)} {...props}>
+        <h1
+            className={headingVariants({ variant, className })}
+            {...props}
+        >
             {children}
         </h1>
     )

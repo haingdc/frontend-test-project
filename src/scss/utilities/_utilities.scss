@@ -175,6 +175,9 @@ input::-webkit-inner-spin-button {
 .radius-10 {
     border-radius: 10px;
 }
+.radius-12 {
+    border-radius: 12px;
+}
 .radius-15 {
     border-radius: 15px;
 }
@@ -225,7 +228,7 @@ input::-webkit-inner-spin-button {
     background: #fff;
 }
 .bg-black-12 {
-    background: var(--black-12);
+    background: var(--black);
 } 
 .bg-red-0 {
     background: var(--red-0);
@@ -271,6 +274,15 @@ input::-webkit-inner-spin-button {
 }
 .bg-primary {
     background: var(--red-10);
+}
+.bg-gray-0 {
+    background: var(--gray-0)
+}
+.bg-gray-1 {
+    background: var(--gray-1)
+}
+.bg-gray-2 {
+    background: var(--gray-2);
 }
 .bg-heading {
     background: linear-gradient(145.55deg, #FFFFFF 20.35%, rgba(255, 255, 255, 0) 128.73%);

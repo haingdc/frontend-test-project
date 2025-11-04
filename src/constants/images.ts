@@ -16,6 +16,12 @@ const IMAGES_CONSTANTS = {
     width: 475,
     height: 627,
     alt: 'iPhone Mockup 1',
+  },
+  car: {
+    path: '/assets/images/fiat.png',
+    width: 55,
+    height: 41,
+    alt: 'Car',
   }
 }
 

@@ -1,6 +1,6 @@
 import { cva } from "class-variance-authority";
 
-const textVariant = cva(
+const textVariants = cva(
     "font-gilroy",
     {
         variants: {
@@ -21,4 +21,4 @@ const textVariant = cva(
     },
 );
 
-export { textVariant as textVariants };
+export { textVariants };

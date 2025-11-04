@@ -1,3 +1,4 @@
+import './section2.scss'
 import SectionContent from '../../../components/shared/section-content/section-content'
 import SectionImage from '../../../components/shared/section-image/section-image'
 import { textSamplesNode } from '../../../components/ui/text/textSamplesNode'
@@ -14,10 +15,9 @@ function Section2() {
                     </div>
                     <div className="section2-containerr1c2">
                         <SectionImage
-                            srcSet="/assets/images/iphone-mockup-1-lg.png 237w, /assets/images/iphone-mockup-1-lg.png 475w"
-                            sizes="(width <= 600px) 237w,
-         800px"
-                            src="/assets/images/iphone-mockup-1-lg.png"
+                            srcSet="/assets/images/iphone-mockup-1.png 273w, /assets/images/iphone-mockup-1-lg.png 475w"
+                            sizes="(width <= 600px) 273w, 800px"
+                            src="/assets/images/iphone-mockup-1.png"
                             alt="iPhone Mockup 1"
                             width="273"
                             height="360"

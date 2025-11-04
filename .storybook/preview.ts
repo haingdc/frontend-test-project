@@ -6,7 +6,7 @@ const customViewports = {
   desktop: {
     name: 'Desktop',
     styles: {
-      width: '1024px',
+      width: '1512px',
       height: '768px',
     },
   },

@@ -1,6 +1,6 @@
 import { cva, type VariantProps } from "class-variance-authority"
 
-const iconVariants = cva("", {
+const iconVariants = cva("icon", {
   variants: {
     variant: {
       default: "",
