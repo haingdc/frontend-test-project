@@ -99,6 +99,9 @@
 .inline-flex {
     display: inline-flex;
 }
+.flex-1 {
+    flex: 1;
+}
 
 /* Width Utilities */
 .w-100 {
@@ -170,6 +173,9 @@
 }
 .-w-px-4 {
     width: -4px;
+}
+.w-px-1 {
+    width: 1px;
 }
 .w-px-4 {
     width: 4px;
@@ -267,6 +273,9 @@
 }
 .gap-px-8 {
     gap: 8px;
+}
+.gap-px-12 {
+    gap: 12px;
 }
 .gap-px-16 {
     gap: 16px;

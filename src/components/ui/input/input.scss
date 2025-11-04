@@ -11,13 +11,16 @@
     .input-label {
         display: flex;
         align-items: center;
-        top: 16px;
-        left: 24px;
         color: #000;
         font-weight: 500;
+        font-size: 18px;
+        line-height: 24px;
+        letter-spacing: -2%;
     }
 
     input[type='text'] {
+        width: 0;
+        flex: 1;
         padding-left: 8px;
         color: #000;
         font-size: 16px;

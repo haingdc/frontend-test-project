@@ -1,0 +1,13 @@
+.heading {
+  font-weight: 700;
+  font-size: 5rem; /* 80px */
+  line-height: 1;
+}
+
+//@media (max-width: 768px) {}
+@media (max-width: 480px) {
+  .heading {
+    font-size: 3rem; /* 48px */
+    line-height: 3.5rem; /* 56px */
+  }
+}

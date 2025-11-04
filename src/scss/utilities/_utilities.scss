@@ -272,6 +272,11 @@ input::-webkit-inner-spin-button {
 .bg-primary {
     background: var(--red-10);
 }
+.bg-heading {
+    background: linear-gradient(145.55deg, #FFFFFF 20.35%, rgba(255, 255, 255, 0) 128.73%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
 
 .bg-center,
 .bg-contain {

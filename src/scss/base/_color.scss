@@ -52,14 +52,61 @@
     --red-4: #ff8787;
     --red-5: #ff6b6b;
     --red-6: #fa5252;
-    --red-7: #f03e3e;
+    --red-7: #E31C1C;
     --red-8: #e03131;
     --red-9: #c92a2a;
     --red-10: #a80606;
     --red-11: #962020;
     --red-12: #7d1a1a;
+    --color-gray-0: #f9f9fb;
+    --color-gray-1: #f3f4f6;
+    --color-gray-2: #e5e7eb;
+    --color-gray-3: #d1d5db;
+    --color-gray-4: #9ca3af;
+    --color-gray-5: #696969;
+    --color-gray-6: #4b5563;
+    --color-gray-7: #374151;
+    --color-gray-8: #1f2937;
+    --color-gray-9: #111827;
+    --color-gray-10: #030712;
     --white-0: #ffffff;
     --black-12: #000000;
+}
+
+.text-red-0 {
+    color: var(--red-0);
+}
+.text-red-1 {
+    color: var(--red-1);
+}
+.text-red-2 {
+    color: var(--red-2);
+}
+.text-red-3 {
+    color: var(--red-3);
+}
+.text-red-4 {
+    color: var(--red-4);
+}
+.text-red-5 {
+    color: var(--red-5);
+}
+.text-red-6 {
+    color: var(--red-6);
+}
+.text-red-7 {
+    color: var(--red-7);
+}
+.text-red-10 {
+    color: var(--red-10);
+}
+
+.text-red-11 {
+    color: var(--red-11);
+}
+
+.text-red-12 {
+    color: var(--red-12);
 }
 
 .text-primary {

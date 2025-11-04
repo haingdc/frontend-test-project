@@ -43,7 +43,7 @@
 .font-h4,
 .font-h5,
 .font-h6 {
-    font-size: 2.375rem; /* 38px */
+    font-size: 5rem; /* 80px */
     font-weight: 400;
     font-optical-sizing: auto;
 }
@@ -102,7 +102,7 @@
 /* Responsive Typography */
 @media (max-width: 768px) {
     .font-h1 {
-        font-size: 1.875rem; /* 30px */
+        font-size: 3rem; /* 48px */
     }
     .font-h2 {
         font-size: 1.5rem; /* 24px */
@@ -123,7 +123,7 @@
 
 @media (max-width: 480px) {
     .font-h1 {
-        font-size: 1.5rem; /* 24px */
+        font-size: 3rem; /* 48px */
     }
     .font-h2 {
         font-size: 1.25rem; /* 20px */
@@ -653,4 +653,8 @@
 .antialiased {
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
+}
+
+.writing-rl {
+    writing-mode: vertical-rl;
 }

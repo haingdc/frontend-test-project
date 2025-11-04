@@ -1,3 +1,4 @@
+import clsx from 'clsx'
 import type { IconProps } from '../icon/variant'
 import './input.scss'
 
@@ -19,14 +20,14 @@ function Input({
     ...props
 }: InputProps) {
     return (
-        <div className="input-field">
+        <div className={clsx("input-field", className)}>
             <label htmlFor={id} className="input-label">
                 {IconLabel ? (
                     <IconLabel className="label-icon text-primary mg-r-12" />
                 ) : null}
                 {label}
             </label>
-            <input type={type} className={className} {...props} />
+            <input type={type} {...props} />
         </div>
     )
 }

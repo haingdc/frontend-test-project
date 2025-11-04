@@ -1,0 +1,31 @@
+/*
+.container {
+    display: flex;
+    align-items: stretch;
+}
+*/
+
+.headline {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.headline-content {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: #1f2937;
+    white-space: nowrap;
+    writing-mode: vertical-rl;
+    transform: rotate(180deg);
+}
+
+.headline-line {
+    width: 1px;
+    flex: 1;
+    min-height: 12px;
+    max-height: 100px;
+    background-color: #2563eb;
+    margin-top: 12px;   
+}
+
