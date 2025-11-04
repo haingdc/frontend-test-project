@@ -6,7 +6,7 @@ import Heading from './heading';
  * Uses Gilroy font and consistent typography styling.
  */
 const meta = {
-  title: 'Shared/Heading',
+  title: 'UI/Heading',
   component: Heading,
   parameters: {},
   tags: [],

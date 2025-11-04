@@ -13,8 +13,8 @@ function HeaderMobile() {
             <div className="flex">
                 <div className="drawer-header-menu-logo">
                     <img
-                        src={IMAGES_CONSTANTS.LOGO}
-                        alt="Logo"
+                        src={IMAGES_CONSTANTS.logo.path}
+                        alt={IMAGES_CONSTANTS.logo.alt}
                         width="148"
                         height="32"
                     />

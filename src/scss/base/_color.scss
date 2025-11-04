@@ -5,7 +5,7 @@
 /* CSS Custom Properties for Color */
 :root {
     --background: #000000;
-    --foreground: #FFFFFF;
+    --foreground: #ffffff;
 
     /*
   --card: oklch(1 0 0);
@@ -21,9 +21,9 @@
   --muted: oklch(0.97 0 0);
   --muted-foreground: oklch(0.556 0 0);
   */
-  --accent: transparent;
-  --accent-foreground: #FFFFFF;
-  /*
+    --accent: transparent;
+    --accent-foreground: #ffffff;
+    /*
   --destructive: oklch(0.577 0.245 27.325);
   --destructive-foreground: oklch(0.577 0.245 27.325);
   --border: oklch(0.922 0 0);
@@ -52,7 +52,7 @@
     --red-4: #ff8787;
     --red-5: #ff6b6b;
     --red-6: #fa5252;
-    --red-7: #E31C1C;
+    --red-7: #e31c1c;
     --red-8: #e03131;
     --red-9: #c92a2a;
     --red-10: #a80606;
@@ -108,7 +108,40 @@
 .text-red-12 {
     color: var(--red-12);
 }
+.text-gray-0 {
+    color: var(--color-gray-0);
+}
+.text-gray-1 {
+    color: var(--color-gray-1);
+}
 
+.text-gray-2 {
+    color: var(--color-gray-2);
+}
+.text-gray-3 {
+    color: var(--color-gray-3);
+}
+.text-gray-4 {
+    color: var(--color-gray-4);
+}
+.text-gray-5 {
+    color: var(--color-gray-5);
+}
+.text-gray-6 {
+    color: var(--color-gray-6);
+}
+.text-gray-7 {
+    color: var(--color-gray-7);
+}
+.text-gray-8 {
+    color: var(--color-gray-8);
+}
+.text-gray-9 {
+    color: var(--color-gray-9);
+}
+.text-gray-10 {
+    color: var(--color-gray-10);
+}
 .text-primary {
     color: var(--primary);
 }

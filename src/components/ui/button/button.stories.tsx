@@ -1,37 +1,37 @@
-import type { Meta, StoryObj } from "@storybook/react-vite";
-import { fn } from "storybook/test";
-import { Button } from "./button";
-import { ArrowRight, ChevronDown, Globe, Menu, User, X } from "../icon";
+import type { Meta, StoryObj } from '@storybook/react-vite'
+import { fn } from 'storybook/test'
+import { Button } from './button'
+import { ArrowRight, ChevronDown, Globe, User, X } from '../icon'
 
 const meta = {
-    title: "UI/Button",
+    title: 'UI/Button',
     component: Button,
     parameters: {},
     tags: [],
     argTypes: {
         variant: {
-            control: { type: "select" },
+            control: { type: 'select' },
             options: [
-                "default",
-                "ghost",
-                "primaryRounded",
-                "primaryRoundedOutline",
-                "secondaryRoundedOutline",
+                'default',
+                'ghost',
+                'primaryRounded',
+                'primaryRoundedOutline',
+                'secondaryRoundedOutline',
             ],
         },
         size: {
-            control: { type: "select" },
-            options: ["default", "rounded", "icon"],
+            control: { type: 'select' },
+            options: ['default', 'rounded', 'icon'],
         },
         disabled: {
-            control: { type: "boolean" },
+            control: { type: 'boolean' },
         },
     },
     args: { onClick: fn() },
-} satisfies Meta<typeof Button>;
+} satisfies Meta<typeof Button>
 
-export default meta;
-type Story = StoryObj<typeof meta>;
+export default meta
+type Story = StoryObj<typeof meta>
 
 export const AllVariants: Story = {
     render: () => (
@@ -85,7 +85,7 @@ export const AllVariants: Story = {
             </div>
         </div>
     ),
-};
+}
 
 export const AllVariantsWithIcons: Story = {
     render: () => (
@@ -141,4 +141,4 @@ export const AllVariantsWithIcons: Story = {
             </div>
         </div>
     ),
-};
+}

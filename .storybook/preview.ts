@@ -2,6 +2,23 @@ import type { Preview } from '@storybook/react-vite'
 import { INITIAL_VIEWPORTS } from 'storybook/viewport';
 import "../src/scss/main.scss"
 
+const customViewports = {
+  desktop: {
+    name: 'Desktop',
+    styles: {
+      width: '1024px',
+      height: '768px',
+    },
+  },
+  mobile: {
+    name: 'Mobile',
+    styles: {
+      width: '375px',
+      height: '667px',
+    },
+  },
+};
+
 const preview: Preview = {
   parameters: {
     controls: {
@@ -27,7 +44,7 @@ const preview: Preview = {
       },
     },
     viewport: {
-      options: INITIAL_VIEWPORTS,
+      options: { ...INITIAL_VIEWPORTS, ...customViewports },
     },
     layout: 'fullscreen',
   },

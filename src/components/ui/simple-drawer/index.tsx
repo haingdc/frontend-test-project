@@ -1,58 +1,55 @@
-import React, {
-    createContext,
-    useContext,
-    useRef,
-    useEffect,
-} from 'react';
-import './simple-drawer.scss';
-import { Button } from '../button/button';
-import { X } from '../icon';
-import IMAGES_CONSTANTS from '../../../constants/images';
-import clsx from 'clsx';
+import React, { createContext, useContext, useRef, useEffect } from 'react'
+import './simple-drawer.scss'
+import { Button } from '../button/button'
+import { X } from '../icon'
+import IMAGES_CONSTANTS from '../../../constants/images'
+import clsx from 'clsx'
 
 // Context to share state between child components
 interface DrawerContextType {
-    isOpen: boolean;
-    onOpenChange: (open: boolean) => void;
-    onClose: () => void;
+    isOpen: boolean
+    onOpenChange: (open: boolean) => void
+    onClose: () => void
 }
 
-const DrawerContext = createContext<DrawerContextType | undefined>(undefined);
+const DrawerContext = createContext<DrawerContextType | undefined>(undefined)
 
 const useDrawer = () => {
-    const context = useContext(DrawerContext);
+    const context = useContext(DrawerContext)
     if (!context) {
-        throw new Error('useDrawer must be used within a SimpleDrawer');
+        throw new Error('useDrawer must be used within a SimpleDrawer')
     }
-    return context;
-};
+    return context
+}
 
 // SimpleDrawer - Main component (now controlled)
 interface SimpleDrawerProps {
-    children: React.ReactNode;
-    open: boolean;
-    onOpenChange: (open: boolean) => void;
+    children: React.ReactNode
+    open: boolean
+    onOpenChange: (open: boolean) => void
 }
 
-export function SimpleDrawer({ children, open, onOpenChange }: SimpleDrawerProps) {
+export function SimpleDrawer({
+    children,
+    open,
+    onOpenChange,
+}: SimpleDrawerProps) {
     const onClose = () => {
-        onOpenChange(false);
-    };
+        onOpenChange(false)
+    }
 
     return (
-        <DrawerContext.Provider
-            value={{ isOpen: open, onOpenChange, onClose }}
-        >
+        <DrawerContext.Provider value={{ isOpen: open, onOpenChange, onClose }}>
             {children}
         </DrawerContext.Provider>
-    );
+    )
 }
 
 // DrawerTrigger - Component to trigger drawer
 interface DrawerTriggerProps {
-    children: React.ReactNode;
-    className?: string;
-    asChild?: boolean;
+    children: React.ReactNode
+    className?: string
+    asChild?: boolean
 }
 
 export function DrawerTrigger({
@@ -60,48 +57,48 @@ export function DrawerTrigger({
     className,
     asChild,
 }: DrawerTriggerProps) {
-    const { onOpenChange } = useDrawer();
+    const { onOpenChange } = useDrawer()
 
     const handleClick = () => {
-        onOpenChange(true);
-    };
+        onOpenChange(true)
+    }
 
     if (asChild) {
         // Clone the child element and add onClick handler
         const child = children as React.ReactElement<
             React.HTMLAttributes<HTMLElement>
-        >;
+        >
         return React.cloneElement(child, {
             onClick: (e: React.MouseEvent<HTMLElement>) => {
                 // Call original onClick if exists
                 if (child.props.onClick) {
-                    child.props.onClick(e);
+                    child.props.onClick(e)
                 }
-                handleClick();
+                handleClick()
             },
-        });
+        })
     }
 
     return (
         <div
             className={clsx('flex', className)}
             onClick={handleClick}
-            style={{ cursor: "pointer" }}
+            style={{ cursor: 'pointer' }}
         >
             {children}
         </div>
-    );
+    )
 }
 
 // DrawerContent - Drawer content
 interface DrawerContentProps {
-    children: React.ReactNode;
-    className?: string;
+    children: React.ReactNode
+    className?: string
 }
 
 export function DrawerContent({ children, className }: DrawerContentProps) {
-    const { isOpen, onClose } = useDrawer();
-    const contentRef = useRef<HTMLDivElement>(null);
+    const { isOpen, onClose } = useDrawer()
+    const contentRef = useRef<HTMLDivElement>(null)
 
     // Close drawer when clicking outside
     useEffect(() => {
@@ -110,101 +107,99 @@ export function DrawerContent({ children, className }: DrawerContentProps) {
                 contentRef.current &&
                 !contentRef.current.contains(event.target as Node)
             ) {
-                onClose();
+                onClose()
             }
-        };
+        }
 
         const handleEscape = (event: KeyboardEvent) => {
-            if (event.key === "Escape") {
-                onClose();
+            if (event.key === 'Escape') {
+                onClose()
             }
-        };
+        }
 
         if (isOpen) {
-            document.addEventListener("mousedown", handleClickOutside);
-            document.addEventListener("keydown", handleEscape);
+            document.addEventListener('mousedown', handleClickOutside)
+            document.addEventListener('keydown', handleEscape)
             // Prevent body scroll when drawer is open
-            document.body.style.overflow = "hidden";
+            document.body.style.overflow = 'hidden'
         }
 
         return () => {
-            document.removeEventListener("mousedown", handleClickOutside);
-            document.removeEventListener("keydown", handleEscape);
-            document.body.style.overflow = "unset";
-        };
-    }, [isOpen, onClose]);
+            document.removeEventListener('mousedown', handleClickOutside)
+            document.removeEventListener('keydown', handleEscape)
+            document.body.style.overflow = 'unset'
+        }
+    }, [isOpen, onClose])
 
-    if (!isOpen) return null;
+    if (!isOpen) return null
 
     return (
-        <div className={`drawer-overlay ${className || ""}`}>
+        <div className={`drawer-overlay ${className || ''}`}>
             <div ref={contentRef} className="drawer-content">
                 {children}
             </div>
         </div>
-    );
+    )
 }
 
 // DrawerHeader - Drawer header
 interface DrawerHeaderProps {
-    children: React.ReactNode;
-    className?: string;
+    children: React.ReactNode
+    className?: string
 }
 
 export function DrawerHeader({ children, className }: DrawerHeaderProps) {
-    return <div className={`drawer-header ${className || ""}`}>{children}</div>;
+    return <div className={`drawer-header ${className || ''}`}>{children}</div>
 }
 
 // DrawerTitle - Drawer title
 interface DrawerTitleProps {
-    children: React.ReactNode;
-    className?: string;
+    children: React.ReactNode
+    className?: string
 }
 
 export function DrawerTitle({ children, className }: DrawerTitleProps) {
-    return <h2 className={`drawer-title ${className || ""}`}>{children}</h2>;
+    return <h2 className={`drawer-title ${className || ''}`}>{children}</h2>
 }
 
 // DrawerDescription - Drawer description
 interface DrawerDescriptionProps {
-    children: React.ReactNode;
-    className?: string;
+    children: React.ReactNode
+    className?: string
 }
 
 export function DrawerDescription({
     children,
     className,
 }: DrawerDescriptionProps) {
-    return (
-        <p className={`drawer-description ${className || ""}`}>{children}</p>
-    );
+    return <p className={`drawer-description ${className || ''}`}>{children}</p>
 }
 
 // DrawerBody - Scrollable main content
 interface DrawerBodyProps {
-    children: React.ReactNode;
-    className?: string;
+    children: React.ReactNode
+    className?: string
 }
 
 export function DrawerBody({ children, className }: DrawerBodyProps) {
-    return <div className={`drawer-body ${className || ""}`}>{children}</div>;
+    return <div className={`drawer-body ${className || ''}`}>{children}</div>
 }
 
 // DrawerFooter - Drawer footer
 interface DrawerFooterProps {
-    children: React.ReactNode;
-    className?: string;
+    children: React.ReactNode
+    className?: string
 }
 
 export function DrawerFooter({ children, className }: DrawerFooterProps) {
-    return <div className={`drawer-footer ${className || ""}`}>{children}</div>;
+    return <div className={`drawer-footer ${className || ''}`}>{children}</div>
 }
 
 // DrawerClose - Component to close drawer
 interface DrawerCloseProps {
-    children: React.ReactNode;
-    className?: string;
-    asChild?: boolean;
+    children: React.ReactNode
+    className?: string
+    asChild?: boolean
 }
 
 export function DrawerClose({
@@ -212,33 +207,33 @@ export function DrawerClose({
     className,
     asChild,
 }: DrawerCloseProps) {
-    const { onClose } = useDrawer();
+    const { onClose } = useDrawer()
 
     if (asChild) {
         // Clone the child element and add onClick handler
         const child = children as React.ReactElement<
             React.HTMLAttributes<HTMLElement>
-        >;
+        >
         return React.cloneElement(child, {
             onClick: (e: React.MouseEvent<HTMLElement>) => {
                 // Call original onClick if exists
                 if (child.props.onClick) {
-                    child.props.onClick(e);
+                    child.props.onClick(e)
                 }
-                onClose();
+                onClose()
             },
-        });
+        })
     }
 
     return (
         <div
             className={className}
             onClick={onClose}
-            style={{ cursor: "pointer" }}
+            style={{ cursor: 'pointer' }}
         >
             {children}
         </div>
-    );
+    )
 }
 
 export function DrawerHeaderMenu() {
@@ -246,7 +241,12 @@ export function DrawerHeaderMenu() {
         <div className={`drawer-header drawer-header-menu`}>
             <div className="flex">
                 <div className="drawer-header-menu-logo">
-                  <img src={IMAGES_CONSTANTS.LOGO} alt="Logo" width="148" height="32" />
+                    <img
+                        src={IMAGES_CONSTANTS.logo.path}
+                        alt={IMAGES_CONSTANTS.logo.alt}
+                        width="148"
+                        height="32"
+                    />
                 </div>
             </div>
             <div className="flex">
@@ -257,5 +257,5 @@ export function DrawerHeaderMenu() {
                 </DrawerClose>
             </div>
         </div>
-    );
+    )
 }
