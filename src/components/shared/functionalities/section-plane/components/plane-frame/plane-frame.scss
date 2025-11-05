@@ -1,0 +1,15 @@
+.plane-frame {
+    .functionality-card-container {
+        top: 290px;
+        left: 498px;
+    }
+}
+
+@media (max-width: 480px) {
+    .plane-frame {
+        .functionality-card-container {
+            top: 176px;
+            left: 150px;
+        }
+    }
+}

@@ -1,0 +1,36 @@
+.text-element {
+    &.text-default {
+        font-size: 1.125rem; /* 18px */
+        line-height: 1.5rem; /* 24px */
+        font-weight: var(--font-weight-normal);
+    }
+    &.text-medium {
+        font-size: 2rem; /* 32px */
+        line-height: 2rem; /* 32px */
+        font-weight: var(--font-weight-semibold);
+    }
+    &.text-lg {
+        font-size: 3rem;
+        line-height: 3.5rem;
+        // TODO: As in Figma, It's 500 but we don't have full version of Gilroy font, so using 700
+        // when we have full version of Gilroy, change it to 500
+        font-weight: var(--font-weight-bold);
+    }
+}
+
+@media (max-width: 480px) {
+    .text-element {
+        &.text-default {
+            font-size: 1rem; /* 16px */
+            line-height: 1.5rem; /* 24px */
+        }
+        &.text-medium {
+            font-size: 1.5rem; /* 24px */
+            line-height: 2rem; /* 32px */
+        }
+        &.text-lg {
+            font-size: 2rem; /* 32px */
+            line-height: 2.5rem; /* 40px */
+        }
+    }
+}

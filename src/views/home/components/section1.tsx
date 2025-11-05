@@ -10,19 +10,20 @@ import {
 import Input from '../../../components/ui/input/input'
 import StepItem from '../../../components/ui/stepper/components/step-item'
 import Stepper from '../../../components/ui/stepper/stepper'
+import CONTENT_PAGES from '../../../constants/content'
 
 function Section1() {
     return (
         <section className="section1">
-            <Heading className="mg-t-24">Votre trajet commence ici</Heading>
+            <Heading className="mg-t-24">{CONTENT_PAGES.HOME.title}</Heading>
             <div className="mg-t-32">
                 <Stepper>
-                    <StepItem active={true}>Ou et quand?</StepItem>
+                    <StepItem active={true}>{CONTENT_PAGES.HOME.steps[0]}</StepItem>
                     <StepItem active={false} hasLine>
-                        Personnalisation
+                        {CONTENT_PAGES.HOME.steps[1]}
                     </StepItem>
                     <StepItem active={false} hasLine>
-                        Valider
+                        {CONTENT_PAGES.HOME.steps[2]}
                     </StepItem>
                 </Stepper>
             </div>

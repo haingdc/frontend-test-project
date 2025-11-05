@@ -1,17 +1,17 @@
 import { cva } from "class-variance-authority";
 
 const textVariants = cva(
-    "font-gilroy",
+    "font-gilroy text-element",
     {
         variants: {
             variant: {
-                default: "text-white",
-                bold: "text-gray-5"
+                default: "text-gray-5",
+                bold: "text-white",
             },
             size: {
-                default: "font-16 lh-24 font-w400",
-                 // As in Figma, It's 500 but we don'thave full version of Gilroy font, so using 700
-                lg: "font-32 lh-40 font-w700",
+                default: "text-default",
+                medium: "text-medium",
+                lg: "text-lg",
             },
         },
         defaultVariants: {

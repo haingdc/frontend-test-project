@@ -13,9 +13,13 @@ const homePageContent = {
   "how-it-works.step1.title": "Exclusivité aéroportuaire",
   "how-it-works.step1.description":
     `Contrairement à d'autres services de transport, notre application est spécifiquement conçue pour les trajets partant des aéroports. Ce focus nous permet de vous offrir un service parfaitement adapté à vos besoins après un vol.`,
+  "how-it-works.step1.card.title": "Comment s’est passé votre trajet?", 
+  "how-it-works.step1.card.lastingText": "Bien", 
   "how-it-works.step2.title": "Personnalisation totale",
   "how-it-works.step2.description":
     `Choisissez le type de véhicule qui correspond à vos attentes, que vous voyagiez seul ou en groupe, avec peu ou beaucoup de bagages.`,
+  "how-it-works.step2.card.text1": "Fiat · E-Ulysse",
+  "how-it-works.step2.card.text2": "TR-543-TG",
   "how-it-works.step3.title": "Réservation à l'avance",
   "how-it-works.step3.description":
     `Planifiez votre trajet avant votre arrivée. En réservant à l'avance, vous êtes assuré qu'un chauffeur sera là pour vous accueillir dès que vous atterrissez. Plus de stress, seulement du confort et de la tranquillité.`,

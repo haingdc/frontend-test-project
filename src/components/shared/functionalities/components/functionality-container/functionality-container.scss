@@ -1,0 +1,26 @@
+.functionality-container {
+  .r1 {
+    display: flex;
+    flex-direction: row;
+    gap: 130px;
+  }
+}
+
+@media (min-width: 1024px) {
+  .functionality-container {
+    &.reverse {
+      .r1 {
+        flex-direction: row-reverse;
+      }
+    }
+  }
+}
+
+@media (max-width: 480px) {
+  .functionality-container {
+    .r1 {
+      flex-direction: column;
+      gap: 32px;
+    }
+  }
+}

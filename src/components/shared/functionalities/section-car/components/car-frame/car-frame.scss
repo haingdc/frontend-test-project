@@ -1,0 +1,15 @@
+.car-frame {
+    .functionality-card-container {
+        top: 84px;
+        left: -34px;
+    }
+}
+
+@media (max-width: 480px) {
+    .car-frame {
+        .functionality-card-container {
+            top: -16px;
+            left: 121px;
+        }
+    }
+}

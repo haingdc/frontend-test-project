@@ -1,0 +1,21 @@
+.functionality-content-icon {
+    width: 56px;
+    height: 56px;
+    border-radius: 12px;
+    .icon {
+        width: 40px;
+        height: 40px;
+    }
+}
+
+@media (max-width: 480px) {
+    .functionality-content-icon {
+        width: 40px;
+        height: 40px;
+        border-radius: 6px;
+        .icon {
+            width: 32px;
+            height: 32px;
+        }
+    }
+}

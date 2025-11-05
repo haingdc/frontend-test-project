@@ -1,21 +1,23 @@
-# Install:
+# Install & Get started:
   - install SF PRO font
   - SF PRO font is located at /documents/SF-Pro.dmg
   reference: https://developer-apple-com.translate.goog/fonts/?_x_tr_sl=en&_x_tr_tl=vi&_x_tr_hl=vi&_x_tr_pto=tc
 
-```markdown
+```terminal
   yarn install
+  yarn build
+  npm install -g serve
+  serve -s dist
 ```
 
 # Development
 
 Run dev
 
-```markdown
-  yarn dev # for development
-  yarn storybook # open storybook
+```terminal
+yarn dev
 ```
-## structure
+## Structure folder
 
 ```text
 structure:
@@ -37,7 +39,15 @@ src
 /src/ui: small, primitive components
 /src/shared: bigger and composable components which can be created by using components inside /src/ui
 
+For each parent component, we can create _components_ directory to include children components
+
 ## Storybook
+
+Run storybook:
+
+```terminal
+yarn storybook
+```
 
 Storybook is tool to list all components. We break each big component into smaller components and so on. Most components should be defined into Storybook. Styling of components can be changed whether they are in desktop or mobile. It 's recommended to define Mobile and Desktop versions. The advantages is as It helps verifying components by perfect pixel easier. For example:
 
@@ -77,16 +87,16 @@ Last thing, We can document for components at the Storybook such as How to use a
 # Build
 
 ```markdown
-  yarn build
+yarn build
 ```
 
 # Serve
 
 After build is done we got `dist` folder, We cen serve from that folder by running:
 
-```markdown
-  npm install -g serve
-  serve -s dist
+```terminal
+npm install -g serve
+serve -s dist
 
 ```
 

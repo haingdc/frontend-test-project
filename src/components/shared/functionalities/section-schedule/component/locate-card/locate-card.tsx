@@ -1,6 +1,6 @@
 import clsx from 'clsx'
-import { CircleDot, Info, MapPin } from '../../../../ui/icon'
-import type { IconProps } from '../../../../ui/icon/variant'
+import { CircleDot, Info, MapPin } from '../../../../../ui/icon'
+import type { IconProps } from '../../../../../ui/icon/variant'
 import './locate-card.scss'
 
 function LocateTime() {

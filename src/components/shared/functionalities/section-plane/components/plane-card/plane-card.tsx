@@ -1,11 +1,6 @@
 import './plane-card.scss'
 import { Star } from '../../../../../ui/icon'
 
-export interface PlaneCardProps {
-    title?: string
-    lastingText?: string
-}
-
 function PlaneCardTitle({ children }: { children?: string }) {
     return <div className="plane-card-title text-center text-gray-10 font-w600 font-upper">{children}</div>
 }
@@ -16,7 +11,7 @@ function PlaneCardLastText({ children }: { children?: string }) {
 
 function PlaneCardStars() {
     return (
-        <div className="plane-card-stars flex gap-px-8 text-primary">
+        <div className="plane-card-stars flex text-primary">
             <Star />
             <Star />
             <Star />
@@ -24,6 +19,11 @@ function PlaneCardStars() {
             <Star />
         </div>
     )
+}
+
+export interface PlaneCardProps {
+    title?: string
+    lastingText?: string
 }
 
 function PlaneCard({ title, lastingText }: PlaneCardProps) {

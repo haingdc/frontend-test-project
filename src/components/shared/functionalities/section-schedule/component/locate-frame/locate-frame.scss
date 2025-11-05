@@ -1,0 +1,15 @@
+.locate-frame {
+    .functionality-card-container {
+        top: 159px;
+        left: 456px;
+    }
+}
+
+@media (max-width: 480px) {
+    .locate-frame {
+        .functionality-card-container {
+            top: 139px;
+            left: 197px;
+        }
+    }
+}

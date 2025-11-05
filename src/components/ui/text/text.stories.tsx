@@ -2,7 +2,7 @@ import type { Meta, StoryObj } from '@storybook/react-vite'
 import { fn } from 'storybook/test'
 import Text from './text'
 import React from 'react'
-import { textSamplesNode } from './textSamplesNode'
+import { allTextVariantsNode, textSamplesNode } from './textSamplesNode'
 
 const meta = {
     title: 'UI/Text',
@@ -29,29 +29,35 @@ export const Default: Story = {
     args: {
         children: 'This is default text',
     },
-}
-export const Bold: Story = {
-    args: {
-        children: 'This is bold variant text',
-        variant: 'bold',
-    },
+    render: () => allTextVariantsNode
 }
 
-export const Large: Story = {
-    args: {
-        children: 'This is large text',
-        size: 'lg',
+export const Mobile: Meta<React.ComponentProps<'div'>> = {
+    globals: {
+        viewport: 'mobile',
     },
+    render: () => allTextVariantsNode,
 }
 
-export const LargeBold: Story = {
-    args: {
-        children: 'This is large bold text',
-        variant: 'bold',
-        size: 'lg',
+export const Desktop: Meta<React.ComponentProps<'div'>> = {
+    globals: {
+        viewport: 'desktop',
     },
+    render: () => allTextVariantsNode,
 }
 
-export const ParagraphExample: Meta<React.ComponentProps<'div'>> = {
+
+export const ParagraphExampleMobile: Meta<React.ComponentProps<'div'>> = {
+    globals: {
+        viewport: 'mobile',
+    },
     render: () => <div>{textSamplesNode}</div>,
 }
+
+export const ParagraphExampleDesktop: Meta<React.ComponentProps<'div'>> = {
+    globals: {
+        viewport: 'desktop',
+    },
+    render: () => <div>{textSamplesNode}</div>,
+}
+

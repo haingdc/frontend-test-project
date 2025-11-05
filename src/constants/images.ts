@@ -22,7 +22,25 @@ const IMAGES_CONSTANTS = {
     width: 55,
     height: 41,
     alt: 'Car',
-  }
+  },
+  'functionality-1-lg.jpg': {
+    path: '/assets/images/functionality-1-lg.jpg',
+    width: 668,
+    height: 445,
+    alt: 'Functionality 1',
+  },
+  'functionality-2-lg.jpg': {
+    path: '/assets/images/functionality-2-lg.jpg',
+    width: 668,
+    height: 445,
+    alt: 'Functionality 2',
+  },
+  'functionality-3-lg.jpg': {
+    path: '/assets/images/functionality-3-lg.jpg',
+    width: 668,
+    height: 445,
+    alt: 'Functionality 3',
+  },
 }
 
 export default IMAGES_CONSTANTS

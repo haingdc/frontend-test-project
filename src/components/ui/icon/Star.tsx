@@ -8,6 +8,7 @@ function Star({ className, size, ...props }: IconProps) {
             viewBox="0 0 20 19"
             fill="none"
             xmlns="http://www.w3.org/2000/svg"
+            id="star-icon"
             className={iconVariants({ size, className })}
             {...props}
         >

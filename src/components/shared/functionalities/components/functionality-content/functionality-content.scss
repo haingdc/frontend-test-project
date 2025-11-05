@@ -1,0 +1,15 @@
+.functionality-content {
+    .functionality-content-title,
+    .functionality-content-desc {
+        margin-top: var(--spacing-24);
+    }
+}
+
+@media (max-width: 480px) {
+    .functionality-content {
+        .functionality-content-title,
+        .functionality-content-desc {
+            margin-top: var(--spacing-16);
+        }
+    }
+}
