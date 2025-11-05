@@ -327,3 +327,14 @@ input::-webkit-inner-spin-button {
 .outline-none {
     outline-style: none;
 }
+
+/* Shadow Utilities */
+.card-shadow {
+    box-shadow: var(--card-shadow);
+}
+
+@media (max-width: 480px) {
+    .card-shadow {
+        box-shadow: var(--card-shadow-mobile);
+    }
+}

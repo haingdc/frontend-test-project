@@ -28,7 +28,7 @@ export interface PlaneCardProps {
 
 function PlaneCard({ title, lastingText }: PlaneCardProps) {
     return (
-        <div className="plane-card flex flex-direction-col flex-ver-center radius-12 bg-white">
+        <div className="plane-card flex flex-direction-col flex-ver-center radius-12 bg-white card-shadow">
             <PlaneCardTitle>{title}</PlaneCardTitle>
             <PlaneCardStars />
             <PlaneCardLastText>{lastingText}</PlaneCardLastText>

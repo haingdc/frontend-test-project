@@ -5,7 +5,9 @@ import IMAGES_CONSTANTS from '../../../../../../constants/images'
 const meta = {
     title: 'Shared/Functionalities/SectionCar/components/CarCard',
     component: CarCard,
-    parameters: {},
+    parameters: {
+        layout: 'padded',
+    },
     tags: [],
 } satisfies Meta<typeof CarCard>
 

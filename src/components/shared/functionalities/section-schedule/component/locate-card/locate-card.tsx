@@ -56,7 +56,7 @@ function LocatePoint({ title, address, iconLabel, hasLine }: LocatePointProps) {
 
 function LocateCard() {
     return (
-        <div className="locate-card bg-white flex flex-direction-col">
+        <div className="locate-card bg-white flex flex-direction-col card-shadow">
             <LocateTime />
             <LocateNotice>À payer</LocateNotice>
             <div className="locate-points flex flex-direction-col">

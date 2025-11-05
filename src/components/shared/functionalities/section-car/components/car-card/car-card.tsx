@@ -28,7 +28,7 @@ type CarCardProps = React.ComponentProps<'div'> & {
 }
 function CarCard({ avatarElement, text1, text2, ...props }: CarCardProps) {
     return (
-        <div className="car-card flex flex-direction-row flex-ver-center radius-12 bg-white" {...props}>
+        <div className="car-card flex flex-direction-row flex-ver-center radius-12 bg-white card-shadow" {...props}>
             {avatarElement}
             <CarCardText text1={text1} text2={text2} />
             <CircleCheck className="car-card-icon text-primary" />
